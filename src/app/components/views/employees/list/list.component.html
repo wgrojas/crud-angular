@@ -1,0 +1,48 @@
+<h1>List of Employees</h1>
+
+<div class="mt-5">
+  <table class="table table-bordered border-success">
+    <thead class="table-dark text-center">
+      <tr>
+        <th scope="col" class="col-1">Id</th>
+        <th scope="col" class="col-1">Name</th>
+        <th scope="col" class="col-1">LastName</th>
+        <th scope="col" class="col-4">Email</th>
+        <th scope="col" class="col-1">StarDate</th>
+        <th scope="col" class="col-1">Options</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr *ngFor="let employee of employees; let i = index">
+        <th class="text-center" scope="row">{{ employee.id }}</th>
+        <td class="text-center">{{ employee.name }}</td>
+        <td class="text-center">{{ employee.lastName }}</td>
+        <td class="text-center">{{ employee.email }}</td>
+        <td class="text-center">{{ employee.startDate }}</td>
+        <td class="text-center">
+          <!-- <i  class="fa fa-pencil-square-o m-3" ></i> -->
+        <div>
+          <i class="bi bi-zoom-in m-2 " alt="zoom" (click)="view(employee)"></i>
+          <i class="bi bi-pencil-square m-2" alt="edit" (click)="edit(employee.id)"></i>
+          <i class="bi bi-trash m-2" alt="delete" (click)="delete(employee.id)"></i>
+        </div>
+        </td>
+      
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- 
+1. Mostrar la información el tabla
+    la tabla va a tener una columna adicional que se va a llamar opciones
+    por cada fila "tr" en esa columna van a colacar dos iconos o botones editar, eliminar
+  2. al hacer click en el boton de editar lo va a redirigir al componente de editar, esa ruta lleva como parametro el id
+  3. recuperar el parametro
+  4. hacer el evento del click - guiar del componente new 
+  5. que enviar al componente del form una entrada que se llame "edit:boolean"
+  6. con la entrada de edit van a cambiar textos
+  7. setear los valores al formulario
+  8. funcionalidad para editar
+-->

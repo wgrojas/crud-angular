@@ -1,0 +1,20 @@
+<button class="btn btn-success" routerLink="/list">Return</button>
+<h1>Details of Employee</h1>
+<div  class="card mb-3" style="max-width: 1024px;">
+    <div class="row g-0">
+      <div class="col-md-4 align-center" >
+        <img src="assets/employee.jpg" class="img-fluid rounded-start" alt="...">
+        
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <p><small>Id:</small> <b style="font-size: 15px;"> {{id}}</b></p>
+          <p ><small>Name:</small> <b style="font-size: 20px;"> {{employee.name}}</b></p>
+          <p class="card-text">Last Name: <b style="font-size: 20px;"> {{employee.lastName}}</b></p>
+          <p class="card-text">Email: <b style="font-size: 20px;"> {{employee.email}}</b></p>
+          <p class="card-text"><small>Start Date: <b style="font-size: 20px;"> {{employee.startDate}}</b></small></p>
+        </div>
+      </div>
+    </div>
+  </div>
+    
